@@ -17,7 +17,9 @@ function Home() {
             <div className="flex justify-end items-center ">
                     <div className="text-black font-semibold mr-10">Home</div>
                     <div className="text-black font-semibold ">About</div>
+                    <Link href="/Services" passHref>
                     <div className="text-black font-semibold ml-10 mr-10 ">Services</div>
+                    </Link>
                     <Link href="/Sign-in" passHref>
                     <button className="bg-blue-500 rounded text-white ml-3 font-semibold px-5 py-2">Sign In</button>
                     </Link>
