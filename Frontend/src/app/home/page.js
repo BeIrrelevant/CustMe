@@ -33,7 +33,7 @@ function Home() {
         <div className="text-center lg:text-left max-w-lg">
           <h1 className="text-black font-extrabold text-5xl lg:text-6xl">Personalize your world with</h1>
           <h1 className="text-black font-extrabold text-5xl lg:text-6xl mt-2">CustMe</h1>
-          <p className="text-black font-normal mt-4 text-xl">Connect Designers and Printing providers.</p>
+          <p className="text-black font-normal mt-4 text-xl">Connect with Designers and Printing providers.</p>
           <div className="flex space-x-6 mt-7">
           <Link href="/Sign-up" passHref>
             <div className="bg-yellow-500 rounded text-black font-semibold px-4 py-2">Get Started</div> </Link>

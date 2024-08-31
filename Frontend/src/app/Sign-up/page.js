@@ -41,7 +41,11 @@ export default function Signup() {
                             </Button>
                         </div>
 
-                        <div className="text-center text-white mb-4">OR</div>
+                        <div className="flex items-center justify-between my-4">
+                        <div className="flex-grow border-t border-gray"></div>
+                        <span className="mx-4 text-black font-semibold">OR</span>
+                        <div className=" flex-grow border-t border-gray"></div>
+                        </div>
 
                         <form className="space-y-4">
                             <div className="flex space-x-2">
