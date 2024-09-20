@@ -1,14 +1,30 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import IconButton from '@mui/material/IconButton';
+import InputAdornment from '@mui/material/InputAdornment';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 export default function Signup() {
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+    const handleTogglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
+    const handleToggleConfirmPasswordVisibility = () => {
+        setShowConfirmPassword(!showConfirmPassword);
+    };
+
     return (
         <>
-            <div className="min-h-screen flex flex-col justify-center items-center bg-white">
-                <div className="bg-gray-95 p-8 rounded-lg shadow-lg max-w-md w-full">
+            <div className="min-h-screen flex items-center justify-center bg-blue-50">
+                <div className="bg-white rounded-lg p-4 w-full max-w-sm shadow-lg border border-gray-200">
                     <div className="text-black font-extrabold text-4xl text-center">
                         <span className="text-blue-500">C</span>
                         <span className="text-blue-500">u</span>
@@ -17,19 +33,18 @@ export default function Signup() {
                         <span className="text-blue-500">M</span>
                         <span className="text-yellow-500">e</span>
                     </div>
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-black">
+                    <h2 className="text-center text-lg font-semibold text-black mb-7">
                         Register Account to CustMe
                     </h2>
 
                     <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
-                        <div className="flex justify-between mb-4">
+                        <div className="flex justify-between mb-5">
                             <Button
                                 variant="contained"
                                 startIcon={<GoogleIcon />}
                                 fullWidth
                                 className="bg-white text-blue-500 mr-2 hover:bg-gray-100"
                             >
-                                Sign up with Google
                             </Button>
                             <Button
                                 variant="contained"
@@ -37,13 +52,12 @@ export default function Signup() {
                                 fullWidth
                                 className="bg-white text-blue-500 ml-2 hover:bg-gray-100"
                             >
-                                Sign up with Facebook
                             </Button>
                         </div>
 
-                        <div className="text-center text-white mb-4">OR</div>
+                        <div className="text-center text-black">OR</div>
 
-                        <form className="space-y-4">
+                        <form className="space-y-4 mt-6">
                             <div className="flex space-x-2">
                                 <TextField
                                     label="First Name"
@@ -71,19 +85,47 @@ export default function Signup() {
                                 fullWidth
                                 InputProps={{ style: { backgroundColor: 'white' } }}
                             />
+
+                            {/* Password Field with Visibility Toggle */}
                             <TextField
                                 label="Password"
                                 variant="outlined"
-                                type="password"
+                                type={showPassword ? 'text' : 'password'}
                                 fullWidth
-                                InputProps={{ style: { backgroundColor: 'white' } }}
+                                InputProps={{
+                                    style: { backgroundColor: 'white' },
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleTogglePasswordVisibility}
+                                                edge="end"
+                                            >
+                                                {showPassword ? <VisibilityOff /> : <Visibility />}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
                             />
+
+                            {/* Confirm Password Field with Visibility Toggle */}
                             <TextField
                                 label="Confirm Password"
                                 variant="outlined"
-                                type="password"
+                                type={showConfirmPassword ? 'text' : 'password'}
                                 fullWidth
-                                InputProps={{ style: { backgroundColor: 'white' } }}
+                                InputProps={{
+                                    style: { backgroundColor: 'white' },
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleToggleConfirmPasswordVisibility}
+                                                edge="end"
+                                            >
+                                                {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
                             />
 
                             <Button
@@ -98,4 +140,3 @@ export default function Signup() {
         </>
     );
 }
-

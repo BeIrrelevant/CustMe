@@ -3,8 +3,8 @@ import React from 'react';
 export default function Signin() {
     return (
         <>
-            <div className="min-h-screen flex flex-col justify-center items-center bg-white">
-                <div className="bg-gray-95 p-8 rounded-lg shadow-lg max-w-md w-full">
+            <div className="min-h-screen flex items-center justify-center bg-blue-50">
+            <div className="bg-white rounded-lg p-4 w-full max-w-sm shadow-lg border border-gray-200">
                     <div className="text-black font-extrabold text-4xl text-center">
                         <span className="text-blue-500">C</span>
                         <span className="text-blue-500">u</span>
