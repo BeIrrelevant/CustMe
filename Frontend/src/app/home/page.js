@@ -9,7 +9,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 function home() {
   return (
     <div className="min-h-screen bg-white">
-      <div id="home" className="flex flex-col lg:flex-row items-center justify-center mt-12 lg:mt-16 lg:space-x-40 min-h-screen">
+      <div id="home" className="flex flex-col lg:flex-row items-center justify-center mt-12 lg:mt-5 lg:space-x-40 min-h-screen">
         <div className="text-center lg:text-left max-w-lg">
           <h1 className="text-black font-extrabold text-5xl lg:text-6xl">Personalize your world with</h1>
           <h1 className="text-black font-extrabold text-5xl lg:text-6xl mt-2">CustMe</h1>

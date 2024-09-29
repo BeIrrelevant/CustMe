@@ -18,7 +18,6 @@ const Sidebar = () => {
         </IconButton>
       </div>
 
-      {/* User Avatar Section */}
       {isSidebarExpanded && (
         <div className="flex flex-col items-center p-4">
           <Avatar alt="Ivan Carmuz" src="/static/images/avatar/1.jpg" sx={{ width: 60, height: 60 }} />
@@ -27,7 +26,7 @@ const Sidebar = () => {
         </div>
       )}
 
-      {/* Navigation List */}
+    
       <List className="flex-grow">
         <ListItem button className="py-2">
           <ListItemIcon className="text-white">
@@ -179,7 +178,7 @@ const MainContent = () => (
 );
 
 
-const chats = () => (
+const mypurchases = () => (
   <div>
     <Navbar />
     <Sidebar />
@@ -187,4 +186,4 @@ const chats = () => (
   </div>
 );
 
-export default chats;
+export default mypurchases;

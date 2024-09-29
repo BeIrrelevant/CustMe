@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Autocomplete, TextField, Button, Chip } from "@mui/material";
 
-// Replace with your Google Maps API key
+
 const GOOGLE_MAPS_API_KEY = "YOUR_GOOGLE_MAPS_API_KEY";
 
 const printingServicesList = [
