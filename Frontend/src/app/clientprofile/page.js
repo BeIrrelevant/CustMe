@@ -207,7 +207,7 @@ const MainContent = () => (
   </div>
 );
 
-const DesignerProfile = () => (
+const ClientProfile = () => (
   <div>
     <Navbar />
     <Sidebar />
@@ -215,6 +215,6 @@ const DesignerProfile = () => (
   </div>
 );
 
-export default DesignerProfile;
+export default ClientProfile;
 
 

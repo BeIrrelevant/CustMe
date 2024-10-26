@@ -77,7 +77,7 @@ const Navbar = () => (
   <AppBar position="fixed" className="bg-white text-black shadow-md ml-48">
     <Toolbar className="flex justify-between">
       <div className="flex items-center">
-        <div className="text-black font-extrabold text-4xl ml-8">
+        <div className="text-black font-extrabold text-3xl ml-10">
           <span className="text-blue-500">C</span>
           <span className="text-blue-500">u</span>
           <span className="text-blue-500">s</span>
